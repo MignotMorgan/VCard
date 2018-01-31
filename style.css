@@ -1,0 +1,214 @@
+:root{
+  --Width : 1000px;
+  --Height : 500px;
+  --Font : 20px Courier;
+  --Color : white;
+}
+
+
+.VCard{
+  width: var(--Width, 750px);
+  height: var(--Height, 500px);
+  background-image: url(https://img00.deviantart.net/eccd/i/2010/034/d/9/wallpaper__dryad_steampunk_by_c55inator.jpg);
+  background-size: 100% 100%;
+  margin:auto;
+  padding: 40px;
+  /*border: 5px solid #3388CC;*/
+  border-radius: 20px;
+  box-shadow: 2px 4px 3px black;
+
+  display: grid;
+  grid-template-columns: 30% 10% 10% 50%;
+  grid-template-rows: 10% 60% 20% 10%;
+
+  font : var(--Font);
+  color : var(--Color);
+/*
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 4;
+*/
+}
+.header-vcard{
+  /*background-color: grey;*/
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  text-align: center;
+}
+.photo-vcard{
+  /*background-image: url(https://img00.deviantart.net/37b2/i/2017/110/8/0/bdr_steampunk_brass_by_bnspyrd-d4n73h6.jpg);
+  background-size: 100% 100%;*/
+  /*background-color: blue;*/
+  grid-column: 1;
+  grid-row: 2;
+
+  display: flex;
+}
+#photo-cv{
+  height: 75%;
+  margin: auto;
+  border-radius:25px;
+  box-shadow: 5px 10px 15px black;
+
+  grid-column: 1;
+  grid-row: 2;
+  /*justify-content: center;*/
+}
+.btn-vcard{
+  /*background-image: url(http://www.textures4photoshop.com/tex/thumbs/steampunk-texture-for-photoshop-thumb31.jpg);
+  background-size: 100% 100%;*/
+  /*background-color: yellow;*/
+  grid-column:  2 / span 2;
+  grid-row:  2 / span 2;
+  display: flex;
+}
+#btn{
+  width: 100%;
+  margin: auto;
+  -webkit-animation-name: Anim-Btn;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: Anim-Btn;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+.boussole{
+  grid-column:  2 / span 2;
+  grid-row:  2;
+  width: 100%;
+  display: flex;
+  /*position: relative;
+  width : 25%;
+  height : 25%;
+  left: 10px;
+  top:10px;*/
+}
+#back-boussole{
+  width : 75%;
+  z-index: 1;
+  margin: auto;
+}
+#fond-boussole{
+  width: 63%;
+  z-index: 2;
+  margin: auto;
+  -webkit-animation-name: Anim-Btn;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: Anim-Btn;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#cadre-boussole{
+  width: 120%;
+  z-index: 3;
+  margin: auto;
+  animation-name: Anim-Cadre;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/*Modifier le code pour le comprendre*/
+-webkit-@keyframes Anim-Btn {
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Anim-Btn {
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Anim-Cadre {
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(10deg);
+  }
+
+}
+.info-vcard{
+  /*background-image: url(http://farm5.static.flickr.com/4073/4741550400_d6b33e14df_o.jpg);
+  background-size: 100% 100%;*/
+  /*background-color: orange;*/
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 2;
+  display: flex;
+}
+.nav-vcard{
+  /*background-color: green;*/
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  vertical-align: bottom;
+  display: inline;
+
+}
+.nav-vcard ul{
+  list-style-type: none;
+}
+.nav-vcard ul li{
+  display: inline;
+  padding: 0 0.5em;
+}
+.nav-vcard ul li a{
+  text-decoration: none;
+  color: var(--Color);
+}
+#btn-address:focus{
+  color:green;
+
+  element(#id-address-vcard){
+    color:green;
+    visibility: hidden;
+  }
+}
+
+.footer-vcard{
+  background-color: red;
+  grid-column: 1 / span 4;
+  grid-row: 4;
+  display: flex;
+}
+.address-vcard{
+  /*background-color: orange;*/
+  margin: auto;
+  /*color: white;*/
+}
+.chapeau-vcard{
+
+}
+#id-chapeau{
+  width: 100px;
+  float: right;
+
+  animation-name: Anim-Chapeau;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes Anim-Chapeau {
+  0%
+  {
+    transform: translateX(0px);
+  }
+  100%
+  {
+    transform: translate(300px, -50px);
+  }
+}
