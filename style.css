@@ -180,7 +180,7 @@
 }
 
 .footer-vcard{
-  background-color: red;
+  /*background-color: red;*/
   grid-column: 1 / span 4;
   grid-row: 4;
   display: flex;
@@ -200,15 +200,65 @@
   animation-name: Anim-Chapeau;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  /*animation-direction: alternate;*/
 }
+/*#id-chapeau:hover{
+    animation-name: Anim-Chapeau;
+    animation-duration: 1s;
+}*/
 @keyframes Anim-Chapeau {
   0%
   {
     transform: translateX(0px);
   }
-  100%
+  /*20%
   {
-    transform: translate(300px, -50px);
+    transform: translateX(300px);
+  }*/
+  /*40%
+  {
+    transform:
+      translate(250px, -50px)
+      rotate(90deg);
   }
+  60%
+  {
+      transform:
+        translate(200px, -100px)
+        rotate(180deg);
+  }*/
+  20%
+  {
+      transform:
+        translate(50px, -400px)
+        scale(2, 2)
+        rotate(180deg);
+  }
+  30%
+  {
+      transform:
+        translate(110px, -360px)
+        scale(1, 1)
+        rotate(360deg);
+  }
+  70%
+  {
+      transform:
+        translate(100px, -360px)
+        scale(1, 1)
+        rotate(340deg);
+  }
+  90%
+  {
+    transform:
+      translate(0px, 0px)
+      /*rotate(360deg);*/
+  }
+}
+
+
+
+
+#btn-address:check #id-address-vcard{
+  color:green;
 }
